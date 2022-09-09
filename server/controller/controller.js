@@ -9,6 +9,7 @@ export const createPost = async (req, res) => {
 
     const volunteer = new VolunteerDb({
       name: req.body.name,
+      date: new Date(),
       place: req.body.place,
       job: req.body.job,
       work: req.body.work,
@@ -26,18 +27,18 @@ export const createPost = async (req, res) => {
 //get posts
 export const getPosts = async (req, res) => {
   try {
-    if (req.query.id) {
-      const result = await VolunteerDb.findById(req.query.id);
+    if (req.params.id) {
+      const result = await VolunteerDb.findById(`${req.params.id}`);
       if (!result) {
         res
           .status(404)
-          .send({ msg: `there is no post with this id ${req.query.id}` });
+          .send({ msg: `there is no post with this id ${req.params.id}` });
         return;
       } else {
         res.send(result);
       }
     } else {
-      const result = await VolunteerDb.find();
+      const result = await VolunteerDb.find().sort({ date: -1 });
       await res.send(result);
     }
   } catch (err) {
@@ -56,6 +57,7 @@ export const updatePost = async (req, res) => {
       req.body,
       { useFindAndModify: false },
     );
+
     if (!result) {
       await res.status(404).send({ msg: 'there is no post ' });
     } else {

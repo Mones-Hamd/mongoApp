@@ -1,23 +1,21 @@
+import { ObjectId } from 'bson';
 import mongoose from 'mongoose';
 
 let schema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
+  date: String,
   place: {
     type: String,
-    required: true,
   },
   job: String,
   work: {
     type: String,
-    required: true,
   },
   good: String,
   available: {
     type: String,
-    required: true,
   },
   details: String,
 });

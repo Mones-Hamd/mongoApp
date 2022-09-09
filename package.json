@@ -26,6 +26,7 @@
     "handlebars": "^4.7.7",
     "mongodb": "^4.9.1",
     "mongoose": "^6.5.4",
+    "node-fetch": "^3.2.10",
     "path": "^0.12.7"
   }
 }
