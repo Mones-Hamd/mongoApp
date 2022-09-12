@@ -2,6 +2,8 @@ import { fetchData } from '../utilit/fetchData.js';
 
 export const postVolunteer = () => {
   const submitBtn = document.querySelector('#submit-btn');
+  console.log(submitBtn);
+  if (!submitBtn) return;
   const values = document.querySelectorAll('input');
 
   const url = `http://localhost:3000/api/volunteer`;
