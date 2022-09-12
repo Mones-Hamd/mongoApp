@@ -2,6 +2,7 @@ import { fetchData } from '../utilit/fetchData.js';
 
 export const deletePost = () => {
   const deleteBtns = document.querySelectorAll('.delete-btn');
+  if (!deleteBtns) return;
   deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener('click', async (e) => {
       e.preventDefault();

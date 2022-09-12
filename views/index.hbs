@@ -1,10 +1,54 @@
 <div class="container">
-  <h2>for each others </h2>
-  <form action="/volunteer" method="GET">
-    <button id="add-volunteer" type="submit">I am a volunteer</button>
-  </form>
-    <form action="/needVolunteer" method="GET">
-    <button type="submit">I need a volunteer</button>
-  </form>
- {{> home}}
+  <div class="first-block">
+    <div class="l-intro">
+        <div class="txt">
+        <h3>Make the difference for a healthy community   </h3>
+        <p> From here it will be your first step to make this a reality .  </p>
+        <p>Discover all volunteer work and choose what suite with your talant </p>
+        </div>
+    </div>
+    <div class="r-intro">
+       <div class="txt-r">
+         <h3>For each others </h3>
+         <p>its a plateform for posting your volunteer offers or post for help from a volunteer  </p>
+         <p>and its possible to interact with posts and leave comments </p>
+       </div>
+       </div>
+    </div>
+  </div>
+  <div class="second-block">
+    <h1>WHAT GOES AROUND COMES AROUND</h1>
+    <p> "Volunteers do not necessarily have a time , they just have the heart "</p>
+    <p>Start now and post your Volunteer offer and get match with who needs help !</p>
+    <div class="btn-section">
+      <form action="/volunteer" method="GET">
+         <button id="home-btn" type="submit">I am a volunteer</button>
+      </form>
+       <form action="/volunteer" method="GET">
+         <button id="home-btn" type="submit">Explore volunteering Posts</button>
+       </form>
+     </div>
+  </div>
+  <div class="third-block">
+      <div class="card-help">
+            <h1>NEED HELP?</h1>
+        <p>Asking for help doesn't make you weak -<br> It reveals strength, Even when you don't feel strong</p>
+        <div class="btn-section">
+            <form action="/needVolunteer" method="GET">
+               <button type="submit" id="home-btn">I need a volunteer</button>
+            </form>
+            <form action="/volunteer" method="GET">
+               <button id="home-btn" type="submit">Explore needy Posts</button>
+            </form>
+  
+   </div>
+    </div>
+  </div>
+  <div class="fourth-block">
+     <h1>The world is one big family, and we need to help each other !</h1>
+     <p>You can also praticipate in supporting those in need by makeing a donation</p>
+    <form action="/volunteer" method="GET">
+    <button id="home-btn" type="submit">Donat</button>
+    </form>
+  </div>
 </div>

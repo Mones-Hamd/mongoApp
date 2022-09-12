@@ -1,44 +1,53 @@
-
-<div class="add-offer">
-  <h1>I am a volunteer</h1>
-  <h2>Create new volunteering offer </h1>
-</div>
-<form  id="offer">
-  <div class="from-group">
-  <label for="name">I am :</label>
-  <input type="hidden" name="id" value=''>
-  <input type="text" name ='name' value="" placeholder="Mark">
+<div class="card">
+  <div class="card-image">	
+    <div class="card-heading">
+      <h1>I am a volunteer</h1>
+      <h2>Create new volunteering offer </h1>
+    </div>
   </div>
+<form  id="offer" >
+  <div class="card-form">
   <div class="form-group">
-  <label for="place">I live in  :</label>
-  <input type="text" name ='place' value="" placeholder=" rotterdam">
-  </div> 
-  <div class="form-group">
-  <label for="job">My job is:</label>
-  <input type="text" name ='job' value="" placeholder="as a web developer">
+    <label for="name" class="input-lable">I Am :  </label>
+    <input type="text" name ='name' value="" placeholder=" Mark" class="input-field">
   </div> 
   <div class="form-group">
-  <label for="work">I can help with :</label>
-  <input type="text" name ='work' value="" placeholder="teaching maths">
-  </div> 
-   <label for="good">And am good with:</label>
-  <input type="text" name ='good' value="" placeholder="computer scince"> 
+    <label for="place" class="input-lable">I live in :  </label>
+    <input type="text" name ='place' value="" placeholder=" rotterdam" class="input-field">
   </div> 
   <div class="form-group">
-  <label for="available">I am available  :</label>
-  <input type="text" name ='available' value="" placeholder="one day a week">
+    <label for="job" class="input-lable"> My job is :  </label>
+    <input type="text" name ='job' value="" placeholder="as a web developer" class="input-field">
   </div> 
   <div class="form-group">
-  <label for="details">More details :</label>
-  <input type="text" name ='details' value="" placeholder="description ">
-   <div class="form-group">
-     <button id="submit-btn"> Post </button>
-   </div>
-      <div class="form-group">
-     <button id="cancel-btn" type="cancel"> cancel </button>
-   </div>
+    <label for="work" class="input-lable"> I can help with :  </label>
+    <input type="text" name ='work' value="" placeholder="teaching maths" class="input-field">
   </div> 
-
-
+  <div class="form-group">
+    <label for="good" class="input-lable"> And am good with :  </label>
+    <input type="text" name ='good' value="" placeholder="computer scince" class="input-field"> 
+  </div> 
+  <div class="form-group" >
+    <label for="available" class="input-lable">  I am available  :  </label>
+    <input type="text" name ='available' value="" placeholder="one day a week" class="input-field">
+  </div> 
+  <div class="form-group">
+    <label for="details" class="input-lable">  More details :  </label>
+    <input type="text" name ='details' value="" placeholder="description " class="input-field">
+  </div>
+</div>
+<div class="btn-section">
+  <div class="btn" id="submit-btn">
+ <i class="fa fa-paper-plane-o fa-2x send" aria-hidden="true"></i>
+  <i class="fa fa-paper-plane-o fa-2x send2" aria-hidden="true"></i>
+  <p>POST</p></div>
+  <div class="btn-cancel" >
+ <i aria-hidden="true" ></i>
+ <i  aria-hidden="true"></i>
+  <p>Cancel</p></div>
+ </div>
+  </div> 
 </form>
+</div>
   {{>home}}
+  

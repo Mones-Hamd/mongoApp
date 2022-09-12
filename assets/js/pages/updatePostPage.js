@@ -2,7 +2,9 @@ import { fetchData } from '../utilit/fetchData.js';
 
 export const updatePost = async () => {
   const updateBtn = document.querySelector('.update-btn');
+  if (!updateBtn) return;
   const inputValues = document.querySelectorAll('input');
+  if (!inputValues) return;
   const url = `http://localhost:3000/api/volunteer/${inputValues[0].value}`;
   updateBtn.addEventListener('click', async (e) => {
     e.preventDefault();
