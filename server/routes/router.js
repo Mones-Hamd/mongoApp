@@ -2,7 +2,6 @@ import express from 'express';
 import {
   homeRouter,
   needVolunteerRouter,
-  showMoreRouter,
   updateRouter,
   volunteerRouter,
 } from '../services/render.js';
@@ -15,7 +14,7 @@ import {
 const router = express.Router();
 router.get('/', homeRouter);
 router.get('/volunteer', volunteerRouter);
-router.get('/volunteer/:id', showMoreRouter);
+
 router.get('/update/:id', updateRouter);
 router.get('/needVolunteer', needVolunteerRouter);
 //API

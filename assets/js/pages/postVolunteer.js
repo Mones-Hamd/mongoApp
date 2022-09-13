@@ -2,9 +2,8 @@ import { fetchData } from '../utilit/fetchData.js';
 
 export const postVolunteer = () => {
   const submitBtn = document.querySelector('#submit-btn');
-  console.log(submitBtn);
   if (!submitBtn) return;
-  const values = document.querySelectorAll('input');
+  const values = document.querySelectorAll('.input-field');
 
   const url = `http://localhost:3000/api/volunteer`;
   submitBtn.addEventListener('click', async (e) => {
@@ -14,18 +13,16 @@ export const postVolunteer = () => {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: values[1]?.value,
-        place: values[2]?.value,
+        name: values[0]?.value,
+        post: values[1]?.value,
+        email: values[2]?.value,
         job: values[3]?.value,
-        work: values[4]?.value,
-        good: values[5]?.value,
-        available: values[6]?.value,
-        details: values[7]?.value,
+        available: values[4]?.value,
+        place: values[5]?.value,
       }),
     };
     const insertedData = await fetchData(url, requestOptions);
     console.log(insertedData);
-    values[0].value = insertedData._id;
     location.reload();
   });
   return;
