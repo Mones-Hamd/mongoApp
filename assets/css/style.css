@@ -178,7 +178,10 @@ input {
 	appearance: none;
 	border-radius: 0;
 }
-
+textarea{
+  appearance: none;
+	border-radius: 0;
+}
 .card {
 	margin: 2rem auto;
 	display: flex;
@@ -263,7 +266,7 @@ input {
 .btn p{
    text-transform: uppercase;
    text-align: center;
-   color: #fff;
+   color: rgb(7, 7, 7);
    font-weight: 900;
    font-size: 20px;
    margin-left: 30px;
@@ -325,7 +328,7 @@ input {
 .btn-cancel p{
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: rgb(237, 10, 10);
   font-weight: 900;
   font-size: 20px;
   margin-left: 30px;
@@ -370,5 +373,17 @@ input {
   100%{
     transform: translateX(-18px);
   }
+}
+.hidden{
+  display: none;
+}
+.show-data{
+  display: block;
+}
+.hidden-comment{
+  display: none;
+}
+.show-comment{
+  display: block;
 }
 

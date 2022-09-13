@@ -1,43 +1,58 @@
 
-<div class="add-offer">
-  <h1>UPDAT</h1>
-  <h2>Updat your  volunteering offer </h1>
+
+<div class="card">
+<div class="card-image">	
+  <div class="card-heading">
+    <h1>UPDATE</h1>
+    <h2>UPDATE YOUR POST... </h1>
+  </div>
 </div>
 <form  id="offer" >
-  <div class="from-group">
-  <label for="name">I am :</label>
-  <input type="hidden" name="id" value='{{_id}}'>
-  <input type="text" name ='name' value="" placeholder="{{name}}">
-  </div>
-  <div class="form-group">
-  <label for="place">I live in  :</label>
-  <input type="text" name ='place' value="" placeholder=" {{place}}">
-  </div> 
-  <div class="form-group">
-  <label for="job">My job is:</label>
-  <input type="text" name ='job' value="" placeholder="{{job}}">
-  </div> 
-  <div class="form-group">
-  <label for="work">I can help with :</label>
-  <input type="text" name ='work' value="" placeholder="{{work}}">
-  </div> 
-   <label for="good">And am good with:</label>
-  <input type="text" name ='good' value="" placeholder="{{good}}"> 
-  </div> 
-  <div class="form-group">
-  <label for="available">I am available  :</label>
-  <input type="text" name ='available' value="" placeholder="{{available}}">
-  </div> 
-  <div class="form-group">
-  <label for="details">More details :</label>
-  <input type="text" name ='details' value="" placeholder="{{details}} ">
-   <div class="form-group">
-     <button id="submit-btn" class="update-btn"> Update </button>
-   </div>
-      <div class="form-group">
-     <a href="../" id="cancel-btn" type=""> cancel </a>
-   </div>
-  </div> 
-
-
+<div class="card-form">
+<div class="form-group">
+  <label for="name" class="input-lable">I Am :  </label>
+  <input type="text" name ='name' value="" placeholder=" {{name}}" class="input-field" required >
+</div> 
+<div class="form-group">
+  <label for="post" class="input-lable">: Post : </label>
+ <textarea type="text" name ='post' value="" placeholder=" {{post}} " class="input-field" required>
+   
+ </textarea>
+</div> 
+<div class="form-group">
+  <label for="email" class="input-lable"> Email: :  </label>
+  <input type="text" name ='email' value="" placeholder="{{email}}" class="input-field" required>
+</div> 
+<div class="form-group">
+  <label for="job" class="input-lable"> My job is :  </label>
+  <input type="text" name ='job' value="" placeholder="{{job}}" class="input-field">
+</div> 
+<div class="form-group">
+  <label for="available" class="input-lable"> Available :  </label>
+  <input type="text" name ='available' value="" placeholder=" {{available}}" class="input-field"> 
+</div> 
+<div class="form-group">
+  <label for="place" class="input-lable">  I live in :  </label>
+  <input type="text" name ='place' value="" placeholder="{{place}}" class="input-field">
+</div>
+</div>
+<div class="btn-section">
+<div class="btn" id="submit-btn">
+<i class="fa fa-paper-plane-o fa-2x send" aria-hidden="true"></i>
+<i class="fa fa-paper-plane-o fa-2x send2" aria-hidden="true"></i>
+<p>UPDATE</p></div>
+<div class="btn-cancel" >
+<i aria-hidden="true" ></i>
+<i  aria-hidden="true"></i>
+<p>Cancel</p></div>
+</div>
+</div> 
 </form>
+</div>
+{{>home}}
+
+
+
+
+
+

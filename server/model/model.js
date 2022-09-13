@@ -5,18 +5,21 @@ let schema = new mongoose.Schema({
   name: {
     type: String,
   },
+
   date: String,
-  place: {
-    type: String,
-  },
+  post: String,
+  email: String,
   job: String,
-  work: {
-    type: String,
-  },
-  good: String,
-  available: {
-    type: String,
-  },
-  details: String,
+  available: String,
+  place: String,
+  likes: Number,
+  comments: [
+    {
+      comment_body: {
+        type: String,
+      },
+      order: Number,
+    },
+  ],
 });
 export const VolunteerDb = mongoose.model('Volunteerdb', schema);

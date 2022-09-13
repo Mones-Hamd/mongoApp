@@ -1,9 +1,0 @@
-{
-    "name": "mones",
-    "place": "req.body.place",
-    "job": "req.body.job",
-    "work":" req.body.work",
-    "good": "req.body.good",
-    "available": "req.body.available",
-    "details": "req.body.details"
-}
