@@ -12,7 +12,7 @@ import {
   updatePost,
 } from '../controller/controller.js';
 const router = express.Router();
-router.get('/', homeRouter);
+router.get('/home', homeRouter);
 router.get('/volunteer', volunteerRouter);
 
 router.get('/update/:id', updateRouter);

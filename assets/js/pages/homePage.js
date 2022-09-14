@@ -16,8 +16,8 @@ export const initVolunteerPost = async () => {
     });
     initFullPost();
     likes();
-    initCommentElement();
     sendComment();
+    initCommentElement();
   } catch (err) {
     throw err;
   }

@@ -57,18 +57,19 @@ export const updatePost = async (req, res) => {
       res.status(400).send({ msg: 'the content can not be empty !' });
       return;
     }
-    if (req.body.comments) {
+    if (req.body.comment_body) {
       const result = await VolunteerDb.findByIdAndUpdate(
         req.params.id,
         {
           $push: {
-            comments: [{ comment_body: req.body.comments }],
+            comments: { comment_body: req.body.comment_body },
           },
         },
         { useFindAndModify: false },
       );
       if (!result) {
         await res.status(404).send({ msg: 'there is no post ' });
+        return;
       } else {
         await res.send(result);
       }

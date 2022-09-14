@@ -13,13 +13,6 @@ let schema = new mongoose.Schema({
   available: String,
   place: String,
   likes: Number,
-  comments: [
-    {
-      comment_body: {
-        type: String,
-      },
-      order: Number,
-    },
-  ],
+  comments: [],
 });
 export const VolunteerDb = mongoose.model('Volunteerdb', schema);

@@ -4,8 +4,8 @@ import { postVolunteer } from './pages/postVolunteer.js';
 import { updatePost } from './pages/updatePostPage.js';
 
 const loadApp = async () => {
-  await initVolunteerPost();
   postVolunteer();
+  await initVolunteerPost();
   updatePost();
   deletePost();
 };

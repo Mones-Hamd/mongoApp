@@ -21,21 +21,20 @@ export const initCommentElement = () => {
 export const sendComment = () => {
   const commentsEl = document.querySelectorAll('.submit-comment-btn');
 
-  commentsEl.forEach((comment) => {
+  commentsEl.forEach(async (comment) => {
     comment.addEventListener('click', async () => {
       const commentId = comment.id;
       const commentValue = document.querySelector('.comment-field').value;
-      console.log(commentValue);
-      const url = `/api/volunteer/${commentId}`;
-      const requestOptions = {
-        method: 'PUT',
-        headers: { 'Content-type': 'application/json; charset=utf-8' },
-        body: JSON.stringify({
-          comments: [{ comment_body: commentValue }],
-        }),
-      };
-      await fetchData(url, requestOptions);
 
+      const url = `/api/volunteer/${commentId}`;
+
+      const requestOptions = {
+        method: 'put',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify({ comment_body: commentValue }),
+      };
+
+      await fetchData(url, requestOptions);
       location.reload();
     });
   });

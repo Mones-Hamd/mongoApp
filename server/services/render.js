@@ -21,11 +21,8 @@ export const updateRouter = async (req, res) => {
   const response = await fetch(url);
 
   const data = await response.json();
-  const name = data.forEach(({ name }) => {
-    return name;
-  });
 
-  res.render('updatePost', name);
+  res.render('updatePost', data);
 };
 export const needVolunteerRouter = (req, res) => {
   res.render('needVolunteer');

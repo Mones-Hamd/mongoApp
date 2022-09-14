@@ -1,6 +1,6 @@
 import { POST_VOLUNTEER_CARD } from '../constant.js';
 
-export const createMinPostsElement = async (data) => {
+export const createMinPostsElement = (data) => {
   const volunteerPostEl = document.querySelector(`.volunteer-posts`);
   if (!volunteerPostEl) return;
   const divEl = document.createElement('div');
@@ -9,8 +9,8 @@ export const createMinPostsElement = async (data) => {
   if (!data.comments[0]) {
     data.comments[0] = { comment_body: 'there is no comments yet' };
   }
-  const lastCommentIndx = (await data.comments.length) - 1;
-  const beforeLastCommentIndx = (await data.comments.length) - 2;
+  const lastCommentIndx = data.comments.length - 1;
+  const beforeLastCommentIndx = data.comments.length - 2;
 
   divEl.innerHTML = String.raw`<div>
   <h1> ${data.name}</h1>
