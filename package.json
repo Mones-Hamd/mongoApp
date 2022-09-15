@@ -20,13 +20,18 @@
   },
   "homepage": "https://github.com/Mones-Hamd/mongoApp#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.9.1",
     "mongoose": "^6.5.4",
     "node-fetch": "^3.2.10",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "fetch-defaults": "^1.0.0"
   }
 }

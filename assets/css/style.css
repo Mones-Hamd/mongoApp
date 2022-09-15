@@ -386,4 +386,8 @@ textarea{
 .show-comment{
   display: block;
 }
-
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  
+}
