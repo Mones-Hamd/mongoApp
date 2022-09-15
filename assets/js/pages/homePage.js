@@ -19,11 +19,12 @@ export const initVolunteerPost = async () => {
   };
   console.log(requestOptions);
   try {
-    const apiFetch = await fetchDefaults(fetch, url, {
-      headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTW9uZXMiLCJpYXQiOjE2NjMyMDE2MzYsImV4cCI6MTY2MzIwNTIzNn0.Kl--a7UNSDqd1WKRWjbC6Ru7ear5kiu4Anbr8muBjpQ `,
-      },
-    });
+    // const apiFetch = await fetchDefaults(fetch, url, {
+    //   headers: {
+    //     Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTW9uZXMiLCJpYXQiOjE2NjMyMDE2MzYsImV4cCI6MTY2MzIwNTIzNn0.Kl--a7UNSDqd1WKRWjbC6Ru7ear5kiu4Anbr8muBjpQ `,
+    //   },
+    // });
+    const data = await fetchData(url, requestOptions);
 
     const renderData = data.forEach((obj) => {
       createMinPostsElement(obj);
@@ -35,7 +36,6 @@ export const initVolunteerPost = async () => {
   } catch (err) {
     throw err;
   }
-  //  const showMoreEl = document.querySelectorAll('.show-more');
 };
 const initFullPost = () => {
   const hiddenEl = document.querySelectorAll('.post-volunteer-card');
